@@ -1,11 +1,9 @@
 module org.example.crud {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql; // Asegúrate de incluir este si usas SQL
 
-    requires org.controlsfx.controls;
-    requires com.dlsc.formsfx;
-    requires org.kordamp.bootstrapfx.core;
-
-    opens org.example.crud to javafx.fxml;
+    // Exporta el paquete para que FXML pueda acceder a tus controladores
     exports org.example.crud;
+    opens org.example.crud to javafx.fxml;
 }
